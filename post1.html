@@ -1,100 +1,126 @@
-/* --- تنظیمات کلی صفحه --- */
-body {
-    background-color: #1a001a; /* بنفش بسیار تیره و مرموز */
-    color: #cccccc; /* رنگ متن اصلی، خاکستری روشن */
-    font-family: 'Garamond', 'Times New Roman', serif; /* فونت خوانا برای متن اصلی */
-    line-height: 1.6; /* فاصله بین خطوط برای خوانایی بهتر */
-    margin: 0; /* حذف مارجین پیش‌فرض مرورگر */
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrbitGhost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Noto+Serif+Persian:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #1a001a;
+            color: #cccccc;
+            font-family: 'Noto Serif Persian', serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-/* --- تایتل اصلی سایت (OrbitGhost) --- */
-/* فرض بر این است که تایتل شما کلاسی مثل site-title یا h1 با شناسه خاص دارد */
-.site-title { 
-    color: #ff8c00; /* نارنجی سوخته یا طلایی تیره */
-    font-family: 'Cinzel Decorative', 'Old English Text MT', serif; /* فونت با حسِ باستانی/گوتیک */
-    font-weight: normal; /* اگر فونت خودش ضخیم است، نرمال کافیست */
-    text-align: center; /* وسط چین کردن */
-    padding-top: 30px; /* کمی فاصله از بالا */
-    text-shadow: 0px 0px 8px #ffcc80, /* سایه روشن‌تر طلایی */
-                 0px 0px 15px #ff8c00, /* سایه نارنجی سوخته */
-                 0px 0px 25px #a0522d; /* سایه قهوه‌ای تیره */
-    font-size: 3.5em; /* اندازه فونت بزرگتر برای تایتل */
-    margin-bottom: 40px; /* فاصله تا محتوای پایین */
-}
+        /* کادر تایتل اصلی */
+        .title-box {
+            background-color: #2a002a;
+            border: 1px solid #8b0000;
+            padding: 20px 40px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
 
-/* --- باکس‌های محتوا (پست‌ها، درباره و...) --- */
-/* فرض بر این است که باکس‌ها کلاسی مثل content-box دارند */
-.content-box {
-    background-color: #2a002a; /* بنفش تیره‌تر از پس‌زمینه اصلی */
-    border: 1px solid #a0522d; /* حاشیه قهوه‌ای تیره یا نارنجی سوخته */
-    box-shadow: 0 8px 25px rgba(160, 82, 45, 0.5), /* سایه قهوه‌ای تیره و پخش */
-                0 0 25px rgba(42, 0, 42, 0.7); /* سایه بنفش تیره و پخش */
-    color: #e0e0e0; /* رنگ متن داخل باکس، کمی روشن‌تر */
-    margin: 20px auto; /* وسط چین کردن و فاصله از بالا/پایین */
-    padding: 30px; /* فاصله داخلی */
-    max-width: 800px; /* حداکثر عرض باکس */
-    border-radius: 8px; /* کمی گوشه‌های گرد */
-}
+        .site-title {
+            color: #ff8c00;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 0px 0px 10px #ff4500, 0px 0px 20px #8b0000;
+            letter-spacing: 5px;
+        }
 
-/* --- تایتل‌های داخل باکس‌ها (مثل تراکم سکوت) --- */
-/* فرض بر این است که تایتل‌های داخلی h2 هستند */
-.content-box h2 {
-    color: #ffcc80; /* طلایی روشن */
-    text-align: center;
-    margin-top: 0;
-    text-shadow: 0 0 5px rgba(255, 204, 128, 0.7), /* سایه طلایی */
-                 0 0 10px rgba(160, 82, 45, 0.5); /* سایه قهوه‌ای */
-    font-family: 'Cinzel Decorative', serif; /* فونت متفاوت برای تایتل داخلی */
-}
+        .content-box {
+            background-color: #2a002a;
+            border: 1px solid #8b0000;
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5), 0 0 20px rgba(26, 0, 26, 0.7);
+            color: #e0e0e0;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            text-align: center; /* همه متون داخل باکس‌ها وسط‌چین شدند */
+        }
 
-/* --- پاراگراف‌ها و متن‌های داخل باکس‌ها --- */
-.content-box p {
-    color: #cccccc; /* خاکستری روشن */
-    margin-bottom: 15px; /* فاصله بین پاراگراف‌ها */
-}
+        .content-box h2 {
+            color: #ffcc80;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(255, 204, 128, 0.5);
+        }
 
-/* --- متن‌های خاص (مثل تاریخ یا خط جدا کننده) --- */
-.content-box .date-info { /* مثالی برای کلاس تاریخ */
-    color: #888888; /* خاکستری تیره‌تر */
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 0.9em;
-}
+        .date-info {
+            color: #888888;
+            font-size: 0.9em;
+            display: block;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
 
-.content-box hr { /* خط جداکننده */
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(160, 82, 45, 0), rgba(160, 82, 45, 0.75), rgba(160, 82, 45, 0)); /* گرادیانت برای خط */
-    margin: 30px 0;
-}
+        .content-text {
+            line-height: 2;
+            font-size: 1.2em;
+        }
 
-/* --- فوتر سایت --- */
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 0.8em;
-    color: #777777; /* رنگ خاکستری برای فوتر */
-    border-top: 1px solid #333333; /* خط جدا کننده بالای فوتر */
-}
+        /* استایل خاص برای متن داخل باکس اول */
+        .big-text {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
 
-/* --- تنظیمات فونت‌های خاص (اگر نیاز به اضافه کردن فونت از وب دارید) --- */
-/* مثال برای فونت Cinzel Decorative از Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Garamond&family=Old+English+Text+MT&display=swap');
+        /* خط جداکننده */
+        .divider {
+            border: 0;
+            height: 1px;
+            background: #8b0000;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
 
-/* 
-   نکته: اگر از فونت‌های خاصی استفاده می‌کنید که نیاز به آپلود دارند،
-   باید فایل فونت را در پروژه قرار داده و در CSS با @font-face تعریف کنید.
-   برای مثال:
-   @font-face {
-       font-family: 'MyGothicFont';
-       src: url('/fonts/my-gothic-font.woff2') format('woff2'),
-            url('/fonts/my-gothic-font.woff') format('woff');
-       font-weight: normal;
-       font-style: normal;
-   }
-   و سپس در بخش font-family از 'MyGothicFont' استفاده کنید.
-*/
+    <!-- کادر تایتل -->
+    <div class="title-box">
+        <h1 class="site-title">OrbitGhost</h1>
+    </div>
+
+    <!-- باکس اول -->
+    <div class="content-box">
+        <div class="content-text big-text">
+            سایه‌ها - ردپایی از آنچه نباید گفته می‌شد
+        </div>
+    </div>
+
+    <!-- باکس دوم -->
+    <div class="content-box">
+        <h2>تراکم سکوت</h2>
+        <span class="date-info">Correct Date, 2558</span>
+        
+        <div class="content-text">
+           میان هیچ چیز و همه چیز،داستان آغاز می شود<br>
+            آنچه در لایه‌های زیرین نهفته است در مرز بودن و نبودن فراتر از آنچه دیده می شود جایی برای ساکنانِ سایه<br>
+        </div>
+
+        <hr class="divider">
+
+        <span class="date-info">When Stars Align, 2558</span>
+
+        <div class="content-text">
+            حقیقت در تاریکیِ میانِ جملات پنهان شده است.<br>
+            نور را فراموش کن؛ حقیقت در تاریکیِ محض شکل می‌گیرد و برای پیدا کردن آن باید به سمت تاریکی رفت.
+        </div>
+    </div>
+
+</body>
+</html>
+
 
