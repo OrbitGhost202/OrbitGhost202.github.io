@@ -2,11 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrbitGhost | Enigmatic Archives</title>
+    <style>
+        /* تم دارک رویال/رمزآلود */
+        body { 
+            background-color: #121234; /* سفید کمی تیره */
+            font-family: 'Georgia', serif; /* فونت کلاسیک و کمی مرموز */
+            color: #ccc; /* خاکستری کمی روشن */
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header { 
+            background-color: #3f0d4a; /* بنفش تیره سلطنتی */
+            padding: 70px 20px; 
+            text-align: center; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            border-bottom: 3px solid #7a00b3; /* بنفش روشن‌تر */
+        }
+
+        header h1 { 
+            color: #e0b0ff; /* بنفش روشن/سیلور */
+            margin: 0; 
+            font-size: 3.2rem;
+            text-shadow: 1px 1px 3px black;
+            font-style: italic;
+        }
+
+        .container { 
+            max-width: 750px; /* کمی عریض‌تر */
+            margin: 40px auto; 
+            padding: 20px;
+            flex: 1; 
+        }
+
+        section { 
+            background: #1e1e3c; /* آبی-بنفش تیره */
+            padding: 30px; 
+            margin-bottom: 30px; 
+            border-radius: 8px; 
+            border-left: 5px solid #7a00b3; /* حاشیه بنفش */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7); 
+            text-align: center; 
+        }
+
+        h2 { 
+            color: #b380ff; /* بنفش ملایم */
+            border-bottom: 1px solid #5a0088; /* بنفش تیره‌تر */
+            padding-bottom: 10px; 
+            display: inline-block; 
+        }
+
+        .post-preview { 
+            border-bottom: 1px solid #3a3a5a; /* خط جداکننده کمی تیره‌تر */
+            padding: 20px 0; 
+        }
+        
+        .post-date { 
+            font-size: 0.85rem; 
+            color: #aaa; /* خاکستری روشن‌تر */
+            margin-bottom: 10px; 
+        }
+
+        a { 
+            color: #e0b0ff; /* همرنگ عنوان */
+            text-decoration: none; 
+            font-weight: bold;
+        }
+        a:hover { 
+            text-decoration: underline; 
+            color: #fff; /* سفید هنگام هاور */
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 25px; 
+            font-size: 0.9rem; 
+            color: #bbb; 
+            background: #0d0d26; /* ابی کمرنگ */
+            margin-top: auto; 
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container { margin: 20px; width: auto; }
+            header h1 { font-size: 2.5rem; }
+            section { padding: 20px; }
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; padding: 50px;">
-    <h1>OrbitGhost!</h1>
-    <p>برداشتی از سایه‌ها-ردپایی از آنچه نباید گفته می‌شد.</p>
-    <a href="index.html">come back home</a>
+<body>
+
+    <header>
+        <h1>OrbitGhost </h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>...</h2>
+            <p>برداشتی از سایه‌ها-ردپایی از آنچه نباید گفته می‌شد</p>
+        </section>
+
+        <section>
+            <h2>تراکم سکوت</h2>
+            <div class="post-preview">
+                <div class="post-date"> Correct Date, 2024</div>
+                <h3>میان هیچ چیز و همه چیز،داستان آغاز می شود.</h3>
+                <p>آنچه در لایه‌های زیرین نهفته است در مرز بودن و نبودن فراتر از آنچه دیده می شود جایی برای ساکنانِ سایه code  shapes our reality.</p>
+                <a href="#">more...</a>
+            </div>
+
+                <div class="post-date">When Stars Align, 2558</div>
+                <h3>حقیقت در تاریکیِ میانِ جملات پنهان شده است.h3>
+                <p>نور را فراموش کن؛ حقیقت در تاریکیِ محض شکل می‌گیرد و برای پیدا کردن ان باید به سمت تاریکی رفت  unseen.</p>
+                <a href="#">more...</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2558 OrbitGhost | Keeper of the Enigmatic</p>
+    </footer>
+
 </body>
 </html>
