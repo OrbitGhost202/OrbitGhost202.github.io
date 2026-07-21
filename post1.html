@@ -48,7 +48,7 @@
             margin-bottom: 40px;
             border-radius: 5px;
             box-sizing: border-box;
-            text-align: center; /* همه متون داخل باکس‌ها وسط‌چین شدند */
+            text-align: center;
         }
 
         .content-box h2 {
@@ -71,18 +71,79 @@
             font-size: 1.2em;
         }
 
-        /* استایل خاص برای متن داخل باکس اول */
         .big-text {
             font-size: 1.5em;
             font-weight: bold;
         }
 
-        /* خط جداکننده */
         .divider {
             border: 0;
             height: 1px;
             background: #8b0000;
             margin: 30px 0;
+        }
+
+        /* --- استایل بخش نظرات (جدید) --- */
+        .comment-section {
+            width: 100%;
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        .comment-section h3 {
+            color: #ffcc80;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* فاصله بین کادرها */
+        }
+
+        .comment-input {
+            background-color: #1a001a;
+            border: 1px solid #8b0000;
+            color: #e0e0e0;
+            padding: 15px;
+            font-family: 'Noto Serif Persian', serif;
+            font-size: 1em;
+            border-radius: 4px;
+            outline: none;
+            box-sizing: border-box; /* برای اینکه پدینگ باعث بزرگ شدن کادر نشود */
+            width: 100%;
+            text-align: right;
+        }
+
+        /* استایل وقتی روی کادر کلیک می‌شود */
+        .comment-input:focus {
+            border-color: #ff8c00;
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+        }
+
+        /* کادر متن نظر بزرگتر باشد */
+        .comment-textarea {
+            min-height: 150px;
+            resize: vertical; /* کاربر فقط بتواند ارتفاع را تغییر دهد */
+        }
+
+        /* دکمه ارسال */
+        .submit-btn {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-family: 'Noto Serif Persian', serif;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff4500;
         }
     </style>
 </head>
@@ -96,7 +157,7 @@
     <!-- باکس اول -->
     <div class="content-box">
         <div class="content-text big-text">
-            برداشتی از سایه‌ها - ردپایی از آنچه نباید گفته می‌شد
+            سایه‌ها - ردپایی از آنچه نباید گفته می‌شد
         </div>
     </div>
 
@@ -120,6 +181,27 @@
             نور را فراموش کن؛ حقیقت در تاریکیِ محض شکل می‌گیرد و برای پیدا کردن آن باید به سمت تاریکی رفت.
         </div>
     </div>
+
+    <!-- بخش نظرات (جدید و اضافه شده) -->
+    <div class="comment-section">
+        <h3>ثبت یک ردپا (نظر)</h3>
+        <form class="input-container">
+            <!-- کادر اول: نام -->
+            <input type="text" class="comment-input" placeholder="نام شما..." required>
+            
+            <!-- کادر دوم: ایمیل یا موبایل -->
+            <input type="text" class="comment-input" placeholder="ایمیل یا شماره موبایل..." required>
+            
+            <!-- کادر سوم: متن نظر (بزرگتر) -->
+            <textarea class="comment-input comment-textarea" placeholder="پیام خود را در تاریکی بنویسید..." required></textarea>
+            
+            <!-- دکمه ارسال -->
+            <button type="submit" class="submit-btn">ارسال به سایه‌ها</button>
+        </form>
+    </div>
+ <footer>
+        <p>&copy; 2558 OrbitGhost | Keeper of the Enigmatic</p>
+    </footer>
 
 </body>
 </html>
