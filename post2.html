@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valerian | زمان در حال خم شدن</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Noto+Serif+Persian:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-color: #4dc4b8; /* آبی روشنِ کمی تیره‌تر و متناسب‌تر */
+            --accent-glow: rgba(77, 196, 184, 0.25);
+        }
+
+        /* تم سردِ کیهانی و تاریک Valerian */
+        body { 
+            background-color: #0b0c10; 
+            font-family: 'Noto Serif Persian', 'Georgia', serif; 
+            color: #c5c6c7; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header { 
+            background-color: #0f1016; 
+            padding: 50px 20px; 
+            text-align: center; 
+            box-shadow: 0 0 25px var(--accent-glow);
+            border-bottom: 4px solid var(--accent-color); 
+        }
+
+        header h1 { 
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--accent-color); 
+            margin: 0; 
+            font-size: 3rem;
+            text-shadow: 0 0 15px rgba(77, 196, 184, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .container { 
+            max-width: 750px; 
+            margin: 40px auto; 
+            padding: 20px;
+            flex: 1; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* استایل عمومی کادرها (نوار کناری قطورترِ کنترل‌شده) */
+        section { 
+            background: #12141c; 
+            padding: 30px; 
+            margin-bottom: 25px; 
+            border-radius: 12px; 
+            border-left: 9px solid var(--accent-color); 
+            border-right: 1px solid #1f2833;
+            border-top: 1px solid #1f2833;
+            border-bottom: 1px solid #1f2833;
+            box-shadow: 0 0 20px rgba(77, 196, 184, 0.1); 
+            text-align: center; 
+        }
+
+        /* کادر کوچک‌تر اول */
+        .title-section {
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        h2 { 
+            font-family: 'Cinzel Decorative', serif;
+            color: #45a29e; 
+            margin: 0 0 5px 0;
+            display: inline-block; 
+            text-shadow: 0 0 8px rgba(69, 162, 158, 0.4);
+        }
+
+        /* نوشته‌های کوچک زیر تایتل‌ها */
+        .sub-meta {
+            font-size: 0.75rem;
+            color: #45a29e;
+            opacity: 0.7;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-family: 'Georgia', serif;
+            border-bottom: 1px solid #1f2833; 
+            padding-bottom: 8px;
+        }
+
+        p {
+            line-height: 2.0; 
+            font-size: 1.1rem; 
+            margin-bottom: 15px; 
+            color: #ffffff; 
+            text-shadow: 0 0 5px rgba(77, 196, 184, 0.2); 
+        }
+
+        .back-section {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        a { 
+            color: var(--accent-color); 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover { 
+            text-decoration: underline; 
+            color: #ffffff; 
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+
+        /* بخش نظرات بدون کادر و ساده در پایین */
+        .comments-section {
+            margin-top: 50px;
+            padding: 20px 0;
+            text-align: right;
+        }
+
+        .comments-section h3 {
+            color: var(--accent-color);
+            font-family: 'Cinzel Decorative', serif;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comment-input, .comment-textarea {
+            background-color: #12141c;
+            border: 1px solid #45a29e;
+            border-radius: 8px;
+            padding: 12px;
+            color: #fff;
+            font-family: 'Noto Serif Persian', serif;
+            font-size: 1rem;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .comment-input:focus, .comment-textarea:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .comment-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #45a29e;
+            color: #0b0c10;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(69, 162, 158, 0.4);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* فوتر نهایی */
+        footer {
+            background-color: #0f1016;
+            text-align: center;
+            padding: 25px;
+            margin-top: auto;
+            border-top: 1px solid #1f2833;
+            color: #45a29e;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Valerian</h1>
+    </header>
+
+    <div class="container">
+        
+        <!-- کادر کوچک اول: زمان در حال خم شدن -->
+        <section class="title-section">
+            <h2>زمان در حال خم شدن</h2>
+        </section>
+
+        <!-- کادر دوم: مسافران مرده زمان -->
+        <section>
+            <h2>مسافران مرده زمان</h2>
+            <div class="sub-meta">When we born2558</div>
+            <p>سایه‌ها دروغ نمی‌گویند؛ آن‌ها حافظه‌ی کالبد ما در غیابِ نورند.</p>
+            <p>معمارانِ ابعادِ موازی در حال ساخت دنیایی جدید برای تحریف‌گران ابدیت هستند.</p>
+        </section>
+
+        <!-- کادر سوم: دستیابی به ابدیت -->
+        <section>
+            <h2>دستیابی به ابدیت</h2>
+            <div class="sub-meta">The Flow of Time2558</div>
+            <p>فشردگی زمان غیرقابل توصیف اما واقعیست. تنها مختل‌کنندگان خط زمان می‌توانند آن را شکار کنند و بافندگان توهم آن را توضیح دهند.</p>
+            <p>تنها زمانی واقعیت زمان مشخص خواهد شد که مسافر مرز صفر آن را حل کند.</p>
+        </section>
+
+        <div class="back-section">
+            <a href="index.html">← بازگشت به صفحه اصلی</a>
+        </div>
+
+        <!-- بخش نظرات بدون کادر -->
+        <div class="comments-section">
+            <h3>دیدگاه تاریک شما</h3>
+            <form class="comment-form">
+                <input type="text" class="comment-input" placeholder="نام یا نام مستعار..." required>
+                <input type="email" class="comment-input" placeholder="ایمیل..." required>
+                <textarea class="comment-textarea" placeholder="نوشتن دیدگاه..." required></textarea>
+                <button type="submit" class="submit-btn">ارسال دیدگاه</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        2024 OrbitGhost | Keeper of the Enigmatic
+    </footer>
+
+</body>
+</html>
